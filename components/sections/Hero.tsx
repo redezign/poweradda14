@@ -69,13 +69,13 @@ export default function Hero() {
   custom={0.2}
   initial="hidden"
   animate="show"
-  className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-6"
+  className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-[0.95] tracking-tight mb-6"
 >
   <span className="block">
     Powering Homes
   </span>
 
-  <span className="block text-blue-600">
+  <span className="block text-blue-[#2563eb]">
     Mobility & Future-Ready
   </span>
 
