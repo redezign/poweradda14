@@ -59,7 +59,7 @@ export default function Hero() {
             >
               <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
               <span className="text-xs font-semibold text-blue-700 tracking-wide uppercase">
-                Mumbai's Premium Energy Platform
+               INDIA’S NEXT-GEN ENERGY PLATFORM
               </span>
             </motion.div>
 
