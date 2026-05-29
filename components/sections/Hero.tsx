@@ -77,7 +77,7 @@ export default function Hero() {
   </span>
 
   <span className="block text-blue-600">
-    Mobility and Reliable
+    Mobility and Future-Ready
   </span>
 
   <span className="block">
@@ -103,7 +103,7 @@ solutions built for modern India
               animate="show"
               className="text-base text-gray-400 mb-10"
             >
-              Modern energy systems for mobility and homes
+              Advanced energy systems for homes, mobility and businesses
             </motion.p>
 
             {/* CTAs */}
