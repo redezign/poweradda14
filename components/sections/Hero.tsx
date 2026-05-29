@@ -77,7 +77,7 @@ export default function Hero() {
   </span>
 
   <span className="block text-blue-600">
-    Mobility and Future-Ready
+    Mobility & Future-Ready
   </span>
 
   <span className="block">
