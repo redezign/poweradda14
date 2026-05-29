@@ -69,7 +69,8 @@ export default function Hero() {
   custom={0.2}
   initial="hidden"
   animate="show"
-  className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
+  className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-6"
+  style={{ fontfamily: 'Sora, sans-serif' }}
 >
   <span className="block">
     Powering Homes
