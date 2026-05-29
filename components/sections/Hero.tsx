@@ -90,7 +90,7 @@ export default function Hero() {
               custom={0.3}
               initial="hidden"
               animate="show"
-              className="text-lg text-gray-500 mb-3 leading-relaxed"
+              className="text-lg text-gray-600 mb-3 leading-relaxed"
             >
               Smart, reliable and future-ready energy
 solutions built for modern India
@@ -100,7 +100,7 @@ solutions built for modern India
               custom={0.35}
               initial="hidden"
               animate="show"
-              className="text-base text-gray-400 mb-10"
+              className="text-base text-gray-500 mb-10"
             >
               Advanced energy systems for homes, mobility and businesses
             </motion.p>
