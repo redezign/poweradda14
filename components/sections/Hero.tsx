@@ -75,7 +75,7 @@ export default function Hero() {
     Powering Homes
   </span>
 
-  <span className="block text-cyan-400">
+  <span className="block text-blue-600">
     Mobility and Reliable
   </span>
 
