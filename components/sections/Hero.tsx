@@ -64,18 +64,25 @@ export default function Hero() {
             </motion.div>
 
             {/* Headline */}
-            <motion.h1
-              variants={fadeUp}
-              custom={0.2}
-              initial="hidden"
-              animate="show"
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-6"
-              style={{ fontFamily: 'Sora, sans-serif' }}
-            >
-              Fast & Reliable{' '}
-              <span className="text-blue-600">Battery Replacement</span>{' '}
-              at Your Doorstep
-            </motion.h1>
+             <motion.h1
+  variants={fadeUp}
+  custom={0.2}
+  initial="hidden"
+  animate="show"
+  className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
+>
+  <span className="block">
+    Powering Homes
+  </span>
+
+  <span className="block text-cyan-400">
+    Mobility and Reliable
+  </span>
+
+  <span className="block">
+    Clean Energy Solutions
+  </span>
+</motion.h1>
 
             {/* Subheadline */}
             <motion.p
@@ -85,7 +92,8 @@ export default function Hero() {
               animate="show"
               className="text-lg text-gray-500 mb-3 leading-relaxed"
             >
-              Premium Car, Bike & Inverter Battery Solutions Across Mumbai
+              Smart, reliable and future-ready energy
+solutions built for modern India
             </motion.p>
             <motion.p
               variants={fadeUp}
