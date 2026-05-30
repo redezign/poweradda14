@@ -125,7 +125,7 @@ export default function About() {
               ))}
             </div>
 
-            <<div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3">
               <a
                 href="/about"
                 className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all"
