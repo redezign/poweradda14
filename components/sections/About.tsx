@@ -125,19 +125,27 @@ export default function About() {
               ))}
             </div>
 
-            <button
-              onClick={() => {
-                const el = document.querySelector('#quote')
-                if (el) {
-                  const top = el.getBoundingClientRect().top + window.scrollY - 80
-                  window.scrollTo({ top, behavior: 'smooth' })
-                }
-              }}
-              className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all"
-            >
-              Work With Us
-              <ArrowRight size={15} />
-            </button>
+            <<div className="flex flex-wrap gap-3">
+              <a
+                href="/about"
+                className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all"
+              >
+                Our Full Story
+                <ArrowRight size={15} />
+              </a>
+              <button
+                onClick={() => {
+                  const el = document.querySelector('#quote')
+                  if (el) {
+                    const top = el.getBoundingClientRect().top + window.scrollY - 80
+                    window.scrollTo({ top, behavior: 'smooth' })
+                  }
+                }}
+                className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-xl transition-all"
+              >
+                Work With Us
+              </button>
+            </div>
           </motion.div>
         </div>
       </div>
