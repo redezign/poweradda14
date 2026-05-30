@@ -143,8 +143,14 @@ export default function AboutPage() {
             <p className="text-base text-gray-600 leading-relaxed">
               The future of energy is decentralized, intelligent, and sustainable. As cities grow and energy demands increase, the need for dependable clean energy solutions has never been greater.
             </p>
-            <p className="text-base text-gray-600 leading-relaxed">
+                        <p className="text-base text-gray-600 leading-relaxed">
               PowerAdda was created to accelerate this transition by connecting customers with trusted energy solutions, expert guidance, and reliable service delivery. Our goal is not only to support today's energy needs but also to help build the infrastructure that will power tomorrow's mobility, homes, businesses, and communities.
+            </p>
+            <p className="text-base text-gray-600 leading-relaxed">
+              PowerAdda is building a modern energy ecosystem focused on reliable battery replacement, renewable energy solutions, smart backup systems, and future-ready power infrastructure.
+            </p>
+            <p className="text-base text-gray-600 leading-relaxed">
+              Based in Mumbai, we combine technology-enabled operations with a customer-first approach — making quality power solutions accessible, transparent, and delivered at your doorstep.
             </p>
           </div>
         </Section>
