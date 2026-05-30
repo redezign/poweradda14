@@ -3,13 +3,14 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Zap } from 'lucide-react'
+import Link from 'next/link'
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'About', href: '#about' },
-  { label: 'Insights', href: '#insights' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '#home', scroll: true },
+  { label: 'Services', href: '#services', scroll: true },
+  { label: 'About', href: '/about', scroll: false },
+  { label: 'Insights', href: '#insights', scroll: true },
+  { label: 'Contact', href: '#contact', scroll: true },
 ]
 
 const WHATSAPP_NUMBER = '918655559777'
@@ -49,9 +50,10 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-18">
+
             {/* Logo */}
-            <button
-              onClick={() => handleNav('#home')}
+            <Link
+              href="/"
               className="flex items-center gap-2 group"
               aria-label="PowerAdda Home"
             >
@@ -64,19 +66,29 @@ export default function Navbar() {
               >
                 Power<span className="text-blue-600">Adda</span>
               </span>
-            </button>
+            </Link>
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-1">
-              {navLinks.map((link) => (
-                <button
-                  key={link.label}
-                  onClick={() => handleNav(link.href)}
-                  className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all"
-                >
-                  {link.label}
-                </button>
-              ))}
+              {navLinks.map((link) =>
+                link.scroll ? (
+                  <button
+                    key={link.label}
+                    onClick={() => handleNav(link.href)}
+                    className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all"
+                  >
+                    {link.label}
+                  </button>
+                ) : (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
             </nav>
 
             {/* Desktop CTAs */}
@@ -121,15 +133,26 @@ export default function Navbar() {
             className="fixed top-16 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-lg lg:hidden"
           >
             <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
-              {navLinks.map((link) => (
-                <button
-                  key={link.label}
-                  onClick={() => handleNav(link.href)}
-                  className="text-left px-4 py-3 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all"
-                >
-                  {link.label}
-                </button>
-              ))}
+              {navLinks.map((link) =>
+                link.scroll ? (
+                  <button
+                    key={link.label}
+                    onClick={() => handleNav(link.href)}
+                    className="text-left px-4 py-3 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all"
+                  >
+                    {link.label}
+                  </button>
+                ) : (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-left px-4 py-3 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
               <div className="mt-3 pt-3 border-t border-gray-100 flex flex-col gap-2">
                 <a
                   href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
