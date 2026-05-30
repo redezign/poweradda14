@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'Home', href: '#home', scroll: true },
   { label: 'Services', href: '#services', scroll: true },
   { label: 'About', href: '/about', scroll: false },
-  { label: 'Insights', href: '#insights', scroll: true },
+  { label: 'Insights', href: '/insights', scroll: false },
   { label: 'Contact', href: '#contact', scroll: true },
 ]
 
