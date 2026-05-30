@@ -16,7 +16,7 @@ const footerLinks = {
     { label: 'Lithium Battery Systems', href: '#services' },
   ],
   Company: [
-    { label: 'About Us', href: '#about' },
+    { label: 'About Us', href: '/about' },
     { label: 'Why PowerAdda', href: '#why' },
     { label: 'How It Works', href: '#how' },
     { label: 'Partner With Us', href: '#vendor' },
