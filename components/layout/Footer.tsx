@@ -1,46 +1,38 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Zap, Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react'
+import { Zap, Mail, MapPin, ArrowUpRight } from 'lucide-react'
+import Link from 'next/link'
 
 const WHATSAPP_NUMBER = '918655559777'
 const WHATSAPP_MSG = encodeURIComponent('Hi PowerAdda! I\'d like to get a quote.')
 
 const footerLinks = {
   Services: [
-    { label: 'Car Battery', href: '#services' },
-    { label: 'Bike Battery', href: '#services' },
-    { label: 'Inverter & Home Backup', href: '#services' },
-    { label: 'Solar Energy', href: '#services' },
-    { label: 'Wind Energy', href: '#services' },
-    { label: 'Lithium Battery Systems', href: '#services' },
+    { label: 'Car Battery', href: '/#services' },
+    { label: 'Bike Battery', href: '/#services' },
+    { label: 'Inverter & Home Backup', href: '/#services' },
+    { label: 'Solar Energy', href: '/#services' },
+    { label: 'Wind Energy', href: '/#services' },
+    { label: 'Lithium Battery Systems', href: '/#services' },
   ],
   Company: [
     { label: 'About Us', href: '/about' },
-    { label: 'Why PowerAdda', href: '#why' },
-    { label: 'How It Works', href: '#how' },
-    { label: 'Partner With Us', href: '#vendor' },
+    { label: 'Why PowerAdda', href: '/#why' },
+    { label: 'How It Works', href: '/#how' },
+    { label: 'Partner With Us', href: '/#vendor' },
     { label: 'Careers', href: '#' },
   ],
   Insights: [
-    { label: 'Battery Guide', href: '#insights' },
-    { label: 'Inverter Tips', href: '#insights' },
-    { label: 'Solar Insights', href: '#insights' },
-    { label: 'EV Energy Systems', href: '#insights' },
-    { label: 'Lithium Education', href: '#insights' },
+    { label: 'Battery Guide', href: '/#insights' },
+    { label: 'Inverter Tips', href: '/#insights' },
+    { label: 'Solar Insights', href: '/#insights' },
+    { label: 'EV Energy Systems', href: '/#insights' },
+    { label: 'Lithium Education', href: '/#insights' },
   ],
 }
 
 export default function Footer() {
-  const handleNav = (href: string) => {
-    if (href === '#') return
-    const el = document.querySelector(href)
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 80
-      window.scrollTo({ top, behavior: 'smooth' })
-    }
-  }
-
   return (
     <footer className="bg-gray-950 text-white">
       {/* CTA Banner */}
@@ -68,13 +60,13 @@ export default function Footer() {
                 <WhatsAppIcon />
                 WhatsApp Us
               </a>
-              <button
-                onClick={() => handleNav('#quote')}
+              <Link
+                href="/#quote"
                 className="flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-gray-900 bg-white hover:bg-gray-100 rounded-xl transition-all"
               >
                 Get Quote
                 <ArrowUpRight size={16} />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -85,7 +77,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
+            <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
                 <Zap size={16} className="text-white fill-white" />
               </div>
@@ -95,7 +87,7 @@ export default function Footer() {
               >
                 Power<span className="text-blue-400">Adda</span>
               </span>
-            </div>
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">
               Mumbai's premium energy and mobility solutions platform. Doorstep battery service, solar, wind, and clean energy infrastructure.
             </p>
@@ -136,12 +128,12 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <button
-                      onClick={() => handleNav(link.href)}
-                      className="text-sm text-gray-400 hover:text-white transition-colors text-left"
+                    <Link
+                      href={link.href}
+                      className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
                       {link.label}
-                    </button>
+                    </Link>
                   </li>
                 ))}
               </ul>
